@@ -12,6 +12,7 @@ import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
+import android.util.Log;
 
 import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
@@ -137,7 +138,7 @@ public class BitmapHelper {
      * @param quality   质量压缩因子
      * @param isRecycle 最终是否销毁位图
      */
-    public static Bitmap bitmapCompressAndStorage(String path, Bitmap bitmap, int quality, boolean isRecycle) {
+    public static void bitmapCompressAndStorage(String path, Bitmap bitmap, int quality, boolean isRecycle) {
         FileOutputStream fos = null;
         try {
             fos = new FileOutputStream(path);
@@ -156,7 +157,6 @@ public class BitmapHelper {
             if (isRecycle)
                 bitmap.recycle();
         }
-        return bitmap;
     }
 
     /**
@@ -178,7 +178,7 @@ public class BitmapHelper {
             int heightRatio = Math.round((float) srcHeight / (float) (reqHeight));
             sampleSize = widthRatio > heightRatio ? widthRatio : heightRatio;
         }
-
+        Log.d("==>",srcWidth+"//"+srcHeight+"//"+reqWidth+"//"+reqHeight+"//"+sampleSize);
         return sampleSize;
     }
 

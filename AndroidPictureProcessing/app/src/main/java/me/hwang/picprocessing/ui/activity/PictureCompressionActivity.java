@@ -40,7 +40,7 @@ public class PictureCompressionActivity extends BaseActivity {
         ivAfterCompress = (ImageView) findViewById(R.id.iv_after_compress);
         btnPixelCompress = (Button) findViewById(R.id.btn_pixel_compress);
         btnQualityCompress = (Button) findViewById(R.id.btn_quality_compress);
-        btnPixelCompress.setVisibility(View.GONE);
+        //btnPixelCompress.setVisibility(View.GONE);
         btnQualityCompress.setVisibility(View.GONE);
 
         btnPixelCompress.setOnClickListener(new View.OnClickListener() {
@@ -68,15 +68,15 @@ public class PictureCompressionActivity extends BaseActivity {
         float rawCount = (float) rawBitmap.getByteCount() / 1024 / 1024;
         ivBeforeCompress.setImageBitmap(rawBitmap);
         tvBeforeCompress.setText("像素压缩前所占的内存空间为:" + (float) (Math.round(rawCount * 100)) / 100 + "MB"
-                + "\n bitmap width pixel is :\t" + rawBitmap.getWidth() + "\n bitmap height pixel is :\t" + rawBitmap.getHeight());
+                + "\n bitmap width pixel is :\t" + rawBitmap.getWidth() + "; bitmap height pixel is :\t" + rawBitmap.getHeight());
 
 
         Bitmap sampledBitmap = BitmapHelper.decodeSampledBitmapFromFile(filePath,ivAfterCompress.getMeasuredWidth(),ivAfterCompress.getMeasuredHeight());
-        ivAfterCompress.setImageBitmap(sampledBitmap);
         float compressedCount = (float) sampledBitmap.getByteCount() / 1024 / 1024;
         tvAfterCompress.setText("像素压缩后所占的内存空间为:" + (float) (Math.round(compressedCount * 100)) / 100 + "MB"
-                + "\n bitmap width pixel is :\t" + sampledBitmap.getWidth() + "\n bitmap height pixel is :\t" + sampledBitmap.getHeight()
-                + "\n imageview width pixel is :\t" + ivAfterCompress.getMeasuredWidth() + "\n imageview height pixel is :\t" + ivAfterCompress.getMeasuredHeight());
+                + "\n bitmap width pixel is :\t" + sampledBitmap.getWidth() + "; bitmap height pixel is :\t" + sampledBitmap.getHeight());
+        ivAfterCompress.setImageBitmap(sampledBitmap);
+
     }
 
     private void doQualityCompress() {
@@ -87,9 +87,9 @@ public class PictureCompressionActivity extends BaseActivity {
                 + "\n bitmap width pixel is :\t" + rawBitmap.getWidth() + "\n bitmap height pixel is :\t" + rawBitmap.getHeight());
 
 
-        Bitmap compressedBitmap = BitmapHelper.bitmapCompressAndStorage(CompressPath, rawBitmap, 25, false);
-        float compressedCount = (float) compressedBitmap.getByteCount() / 1024 / 1024;
-        ivAfterCompress.setImageBitmap(compressedBitmap);
+        BitmapHelper.bitmapCompressAndStorage(CompressPath, rawBitmap, 25, false);
+        float compressedCount = (float) rawBitmap.getByteCount() / 1024 / 1024;
+        ivAfterCompress.setImageBitmap(rawBitmap);
         tvAfterCompress.setText("像素压缩前所占的内存空间为:" + (float) (Math.round(compressedCount * 100)) / 100 + "MB"
                 + "\n bitmap width pixel is :\t" + rawBitmap.getWidth() + "\n bitmap height pixel is :\t" + rawBitmap.getHeight());
     }

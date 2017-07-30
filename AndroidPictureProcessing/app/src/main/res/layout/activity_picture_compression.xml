@@ -27,7 +27,7 @@
         android:id="@+id/iv_before_compress"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="fitXY"/>
 
     <TextView
         android:id="@+id/tv_after_compress"
@@ -38,5 +38,5 @@
         android:id="@+id/iv_after_compress"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:scaleType="centerCrop"/>
+        android:scaleType="fitXY"/>
 </LinearLayout>  
