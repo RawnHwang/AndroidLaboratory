@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MaterialDesignTest</string>
+    <string name="drawer_toggle_opened">Opened</string>
+    <string name="drawer_toggle_closed">Closed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

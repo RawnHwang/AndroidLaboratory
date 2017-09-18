@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 内容视图 -->
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/fl_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <include layout="@layout/toolbar_app" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/test_snack_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:layout_margin="15dp"
+            android:src="@drawable/ic_snack_bar" />
+    </android.support.design.widget.CoordinatorLayout>
+
+    <!-- 侧滑菜单视图 -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_main"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/layout_header_nav_main"
+        app:menu="@menu/menu_navigation" />
+
+</android.support.v4.widget.DrawerLayout>

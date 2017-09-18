@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_goto_first"
+            android:icon="@drawable/ic_nav_first"
+            android:title="第一页" />
+
+        <item
+            android:id="@+id/nav_goto_second"
+            android:icon="@drawable/ic_nav_second"
+            android:title="第二页" />
+
+        <item
+            android:id="@+id/nav_goto_third"
+            android:icon="@drawable/ic_nav_third"
+            android:title="第三页" />
+    </group>
+</menu>

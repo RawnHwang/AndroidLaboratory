@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:lineSpacingMultiplier="1.5"
+            android:text="一个月前，恐怕谁也想不到刚刚易主的AC米兰会是今夏转会市场最能烧钱的主。有了中国资本力挺，红黑军团已经先后买下了多达10名球员，总投入达到了1.9亿欧元。\n\n
+老板肯花钱，主教练无疑是最开心的人。但米兰少帅蒙特拉似乎还不满足，在接受澎湃记者采访时，他直言不讳：“米兰的收购还未结束，我还需要一名中锋。买人的钱来了，蒙特拉开心了。\n\n
+见到蒙特拉时，距离米兰签下尤文图斯明星后卫博努奇不过48小时，蒙特拉的兴奋溢于言表，“在我看来，他是世界最佳后卫，必须感谢俱乐部，这个交易非常棒。”\n\n
+按目前透露的消息，博努奇转会金额达到4000万欧元，年薪为750万欧元，并有250万欧元的浮动条款，怎么看，在当今意甲都算一个大买卖。\n\n
+从意甲班霸尤文图斯直接挖人，红黑军团的野心可见一斑。有媒体认为，“这不仅仅是源于技战术的考虑，更应该看作是一个信号，告诉大家‘米兰又回来了’。\n\n
+不过，对于能否撼动斑马军团的统治地位、帮助米兰重回巅峰，蒙特拉依然很是谨慎。“我们新赛季的首要目标是重回欧冠，至于其他的（争冠），意大利联赛的整体实力都在增强，我无法给出一个具体的时间，还要看我们球员的磨合情况。”\n\n
+正如蒙特拉所言，由于大量引援，新赛季的米兰将会成为整个欧洲变化最大的球队。按预测，新赛季首发中只有唐纳鲁马、苏索、博纳文图拉三个“老人”，其他位置都将被新援替代。\n\n
+这意味着主教练将带领一支几乎完全陌生的球队，这会是蒙特拉幸福的烦恼吗？“我不会为此焦躁，我们的新球员迅速就位，已经早早投入到训练中，而且每个球队在夏天都要经历这个过程。”\n\n
+听上去，相比于过去巧妇难为无米之炊，蒙特拉并不介意眼下的工作繁重。安德烈·孔蒂管理层效率被点赞，还要买买买对于新援，蒙特拉无疑相当满意。\n\n
+比如提到恰尔汗奥卢时他就表示，“我已经在很多阵型中找到了他可以胜任的角色，我相信新球员都能最大限度发挥自己的特长。”\n\n
+而在当下，诸多意大利媒体的声音也对米兰的夏季攻略赞不绝口。除了出手大方，米兰管理层的办事效率很高，《晚邮报》资深评论员斯孔切蒂就表示：“在一个月内签下那么多球员，而且所有的签约都相当精准高效，不用等到转会窗口接近关闭的时候才出手，而且都是按照位置（需要）买人，必须承认，这支米兰已经带给了人们新气象。”\n\n
+而在米兰搞定最新的转会后，博努奇和比利亚两位新球员将火速飞往中国，与参加国际冠军杯的球队会合，不错过这个重要的热身机会。\n\n
+米兰的引援是否会就此画上一个句号？夸张一点说，中国老板已经相当于买下了一支球队，在欧陆诸强中的投入目前排名第一。\n\n
+对此，蒙特拉却给出了一个相反意见，“不，现在还不能说转会已经结束，我们在各个位置都得到了增强，但是诚实的说，在我的计划中，还需要一个有能力的中锋，我们还在努力。" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:id="@+id/btn_show_board"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="match_parent"
+                android:text="面板" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#3c3c3c"/>
+    <LinearLayout
+        android:id="@+id/layout_suppressible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:text="这是面板"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>  
